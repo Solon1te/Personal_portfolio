@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Orbitron&family=Philosopher&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+nav {
+    display:flex;
+    background-color: rgb(40, 75, 99);
+    align-items: center;
+    justify-content: center;
+    padding:2em; 
+}
+
+.mobile-nav-toggle {
+    display:none;
+}
+
+.heroHeaderName{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(40, 75, 99);
+    height: 87px;
+    align-content: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.name {
+    font-family: Orbitron, Geneva, Tahoma, sans-serif;
+    letter-spacing: .1em;
+    min-width: 277px;
+    color:rgb(255, 255, 255);
+}
+
+
+ul {
+    list-style-type: none;
+    display:flex;
+    padding: 0%;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: Philosopher, Geneva, Tahoma, sans-serif;
+    color:rgb(53, 53, 53)
+}
+
+a {
+    font-family: Gruppo, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    color:rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: .5em;
+    margin: .25em;
+}
+
+.heroHeaderName {
+    float:left;
+    width:50%;
+}
+
+.links {
+    float: right;
+    width:50%;
+}
+
+.headerlinks:hover {
+    color:rgb(217, 217, 217);
+    background-color:rgb(53, 53, 53);
+    border-radius: 7px;
+
+}
+
+.aboutme {
+    font-family: Philosopher, Geneva, Tahoma, sans-serif;
+    max-width: 30%;
+    min-width: 300px;
+    padding: 2em;
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 1em;
+}
+
+p{
+    font-size: 1.25em;
+}
+
+.aboutMeImage {
+    height:35vh;
+    margin: 2em 3em;
+    border-radius: .4em;
+
+}
+
+.aboutMePhoto-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.github {
+    display:flex;
+    justify-content: center;
+    margin-top:10vh;
+}
+
+.main-button-style {
+    background-color: rgb(60, 110, 113);
+    padding:1em;
+    border-radius: .3em;
+    margin-bottom:4em;
+}
+
+.main-button-style:hover {
+    background-color:#bb4c44;
+    color: rgb(53, 53, 53);
+    padding:1em;
+}
+
+.main-button-style:active {
+    box-shadow: 0px 5px gray;
+    padding:1em;
+}
+
+/*skills section*/
+
+.skills-header {
+    text-align: center;
+}
+
+.skills {
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    background-color: rgb(53, 53, 53);
+    
+}
+
+.fa-brands, .fa-solid {
+    color:rgb(255, 255, 255)
+}
+
+.fa-brands {
+    font-size: 3em;
+    padding: .5em;
+    
+}
+
+.fa-bounce-hover:hover {
+    -webkit-animation: fa-bounce 1s infinite linear;
+    animation-iteration-count: 1;
+}
+
+@media only screen and (max-width: 750px) {
+    .links {
+        display:none;
+    }
+    
+    nav{
+        height:87px;
+    }
+    
+    ul {
+        position:fixed;
+        z-index: 1000;
+        inset: 0 0 0 35%;
+        flex-direction: column;
+        background:hsl(0 0% 0% /0.7);
+        backdrop-filter: blur(1rem);
+        padding: min(20vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+        
+    }
+
+    ul[data-visible="true"] {
+        transform: translateX(0%)
+    }
+
+    li {
+        padding:1em;
+    }
+
+    li:hover {
+        background-color: rgb(40, 75, 99);
+        border-radius: 1em;
+    }
+
+    .headerlinks:hover {
+        background-color: inherit;
+    }
+
+    .mobile-nav-toggle {
+        display:block;
+        position: absolute;
+        background: url(./Media/Hamburger_icon_white.svg);
+        background-repeat: no-repeat;
+        border: none;
+        width: 2rem;
+        aspect-ratio: 1;
+        right:2rem;
+        top:2rem;
+        z-index: 9999;
+
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background: url(./Media/close_white.svg);
+        background-size: cover;
+        border: none;
+    }
+}
+    
+@media only screen and (max-width: 490px) {
+    .name {
+        font-size: 1.1em;
+    }
+
+    .mobile-nav-toggle {
+        width:1.4rem;
+        background-size: cover;
+    }
+}
