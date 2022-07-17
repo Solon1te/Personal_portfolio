@@ -231,3 +231,34 @@ p{
         background-size: cover;
     }
 }
+
+/*projects page*/
+
+.under-construction {
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.construction-image {
+    height:40vh;
+}
+
+/*contact page*/
+.contact-details {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    height:80vh;
+}
+
+.fa-linkedin, .fa-envelope {
+    color:rgb(40, 75, 99);
+}
+
+
+.fa-envelope {
+    font-size: 3.2em;
+}
